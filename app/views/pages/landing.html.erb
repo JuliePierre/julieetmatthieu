@@ -1,7 +1,14 @@
 <div id="landing-banner">
   <div id="landing-form">
-    <form action="/">
-      <input type="text" class="white-input">
-    </form>
+    <div class="frame frame--bg-grey">
+      <div class="frame__text">
+        <p>Veuillez renseigner votre adresse email pour accéder au contenu du site</p>
+        <form action="">
+          <label for="email" class="label-upper">Email</label>
+          <input type="text" class="input white-input input-with-submit" id="email">
+          <%= link_to "Valider", root_path, class: "btn btn-green" %>
+        </form>
+      </div>
+    </div>
   </div>
 </div>

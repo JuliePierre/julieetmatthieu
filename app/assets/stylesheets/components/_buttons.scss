@@ -6,6 +6,17 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+.btn-green {
+  background-color: $green;
+  border: 2px solid $green;
+  color: white;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: transparent;
+    color: $green;
+  }
+}
+
 .btn.btn-bordered-green {
   color: #306b4f;
   border: 2px solid #306b4f;

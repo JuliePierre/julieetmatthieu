@@ -1,11 +1,14 @@
+form {
+  text-align: left;
+}
 .input {
-  border-radius: 4px;
-  height: 55px;
+  height: 45px;
   font-family: $body-font;
   font-weight: bold;
   padding-left: 15px;
   font-size: 14px;
   width: 100%;
+  margin-bottom: 14px;
   &:focus {
     outline: none;
   }
