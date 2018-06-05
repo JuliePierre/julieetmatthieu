@@ -1,0 +1,27 @@
+.btn {
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn.btn-bordered-green {
+  color: #306b4f;
+  border: 2px solid #306b4f;
+  transition: all 0.3s ease;
+}
+.btn.btn-bordered-green:hover {
+  background-color: #306b4f;
+  color: white;
+}
+// links
+.link-upper {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  &:hover {
+    color: $light-green;
+  }
+}
