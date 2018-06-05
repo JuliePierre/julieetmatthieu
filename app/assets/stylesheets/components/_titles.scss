@@ -1,0 +1,25 @@
+.heading-line {
+  position: relative;
+  text-align: center;
+}
+.heading-line--small {
+  width: 160px;
+}
+.heading-line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -100;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: $green;
+}
+.heading-line-icon {
+  background-color: white;
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}

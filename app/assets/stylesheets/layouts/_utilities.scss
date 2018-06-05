@@ -1,24 +1,30 @@
 .text-green {
   color: $green;
 }
-.text-card {
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 4px;
-  display: inline-block;
-}
-.text-card--grey-bg {
-  background: rgba(255,255,255,0.8);
-  border: 1px solid $green;
-  color: $green;
-}
-.text-card--green-bg {
-  background: $green;
-  border: 1px solid $green;
-  color: white;
-}
-
 // backgrounds
 .grey-bg {
   background-color: $grey;
+}
+// encarts
+.frame {
+  padding: 8px;
+  display: inline-block;
+  .frame__text {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+.frame--bg-grey {
+  background-color: rgba(255,255,255,0.8);
+  .frame__text {
+    color: $green;
+    border: 2px solid $green;
+  }
+}
+.frame--bg-green {
+  background-color: $green;
+  .frame__text {
+    color: white;
+    border: 2px solid white;
+  }
 }

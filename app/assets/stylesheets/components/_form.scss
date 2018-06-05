@@ -1,20 +1,42 @@
-.grey-input {
+.input {
   border-radius: 4px;
   height: 55px;
   font-family: $body-font;
-  border: 2px solid $grey-background;
-  color: $grey;
   font-weight: bold;
   padding-left: 15px;
   font-size: 14px;
   width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+.grey-input {
+  border: 1px solid $grey-background;
+  color: $grey;
   background-color: $grey-background;
   &::placeholder {
     opacity: 0.6;
   }
   &:focus {
     outline: none;
-    border: 2px solid $brand-color;
+    border: 1px solid $brand-color;
+  }
+}
+.white-input {
+  border: 1px solid transparent;
+  color: $brand-color;
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 14px;
+  width: 100%;
+  background-color: white;
+  &::placeholder {
+    opacity: 0.6;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $brand-color;
   }
 }
 

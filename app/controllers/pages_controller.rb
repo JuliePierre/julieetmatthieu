@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def components
   end
+
+  def landing
+  end
 end
