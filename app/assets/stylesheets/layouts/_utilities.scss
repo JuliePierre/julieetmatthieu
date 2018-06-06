@@ -1,9 +1,12 @@
 .text-green {
   color: $green;
 }
+.gras {
+  font-weight: 700;
+}
 // backgrounds
-.grey-bg {
-  background-color: $grey;
+.bg-grey {
+  background-color: $grey-background;
 }
 // encarts
 .frame {

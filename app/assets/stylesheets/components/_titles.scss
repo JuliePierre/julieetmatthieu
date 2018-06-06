@@ -16,10 +16,15 @@
   height: 2px;
   background-color: $green;
 }
-.heading-line-icon {
-  background-color: white;
+.line-icon {
   display: inline-block;
   padding-left: 2rem;
   padding-right: 2rem;
   text-align: center;
+}
+.line-icon--bg-white {
+  background-color: white;
+}
+.line-icon--bg-grey {
+  background-color: $grey-background;
 }

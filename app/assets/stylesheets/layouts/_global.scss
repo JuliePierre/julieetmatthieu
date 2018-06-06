@@ -1,0 +1,10 @@
+body {
+  color: $grey;
+  a {
+    color: $grey;
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}

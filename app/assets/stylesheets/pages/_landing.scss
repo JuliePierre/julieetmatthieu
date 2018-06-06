@@ -8,5 +8,17 @@
   text-align: center;
 }
 #landing-form {
-  padding-top: 65vh;
+  padding-top: 45vh;
+}
+#landing-intro {
+  padding-top: 2vh;
+  color: #34363e;
+  h1 {
+    margin-bottom: 0;
+    font-size: 80px;
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 44px;
+  }
 }

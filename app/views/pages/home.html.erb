@@ -1,2 +1,107 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="home-banner">
+  <div id="home-intro">
+    <h1>Julie & Matthieu</h1>
+    <h2>22 septembre 2018</h2>
+  </div>
+</div>
+<div id="nav">
+  <div class="container">
+    <div class="small-container">
+      <div id="menu">
+        <a href="#" class="menu_item">Accueil</a>
+        <a href="#" class="menu_item">Programme</a>
+        <a href="#" class="menu_item">Infos pratiques</a>
+        <a href="#" class="menu_item">Liste de mariage</a>
+        <a href="#" class="menu_item">RSVP</a>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="bg-grey text-center">
+  <div class="container">
+    <div class="section_title-container">
+      <div class="section_title">
+        <h2>Programme</h2>
+        <div class="heading-line">
+          <div class="line-icon line-icon--bg-grey">
+            <%= image_tag "motif.svg", width: 30 %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Samedi 22 septembre 2018</h1>
+    <div class="text-center">
+      <div class="program-container">
+        <div class="program-step first-step">
+          <div class="program_item">
+            <%= image_tag "rings.svg", width: 80 %>
+          </div>
+          <div class="program_item program_timeline"><%= image_tag "timeline_first.svg" %></div>
+          <div class="program_infos">
+            <span class="gras">11h15</span> - MAIRIE
+            <h5 style="line-height: 28px;"><%= image_tag "love_position.svg", width: 20 %> Mairie de Pornichet</h5>
+            <p>120 avenue du Général de Gaulle</p>
+          </div>
+        </div>
+        <div class="program-step">
+          <div class="program_item">
+            <%= image_tag "diner.svg", width: 80 %>
+           </div>
+          <div class="program_item program_timeline"><%= image_tag "timeline.svg" %></div>
+          <div class="program_infos">
+            <span class="gras">12h00</span> - DEJEUNER
+            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Ker Yette</h5>
+            <p>41 avenue du littoral</p>
+          </div>
+        </div>
+        <div class="program-step">
+          <div class="program_item">
+            <%= image_tag "beach.svg", width: 80 %>
+           </div>
+          <div class="program_item program_timeline"><%= image_tag "timeline.svg" %></div>
+          <div class="program_infos">
+            <span class="gras">15h00</span> - QUARTIER LIBRE / PLAGE
+            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Plage de Sainte-Marguerite</h5>
+          </div>
+        </div>
+        <div class="program-step">
+          <div class="program_item">
+            <%= image_tag "drinks.svg", width: 80 %>
+           </div>
+          <div class="program_item program_timeline"><%= image_tag "timeline.svg" %></div>
+          <div class="program_infos">
+            <span class="gras">18h30</span> - COCKTAIL DINATOIRE
+            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Ker Yette</h5>
+            <p>41 avenue du littoral</p>
+          </div>
+        </div>
+        <div class="program-step last-step">
+          <div class="program_item">
+            <%= image_tag "party.svg", width: 80 %>
+           </div>
+          <div class="program_item program_timeline"><%= image_tag "timeline_last.svg" %></div>
+          <div class="program_infos">
+            <span class="gras">22h30</span> - SOIRÉE DANSANTE
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Dimanche 23 septembre 2018</h1>
+    <div class="text-center">
+      <div class="program-container">
+        <div class="program-step">
+          <div class="program_item">
+            <%= image_tag "brunch.svg", width: 80 %>
+           </div>
+           <div class="program_item program_timeline"><%= image_tag "spot.svg" %></div>
+          <div class="program_infos">
+            <span class="gras">11h30</span> - PETIT DEJEUNER / DEJEUNER / DEBRIEF
+            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Ker Yette</h5>
+            <p>41 avenue du littoral</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br>
