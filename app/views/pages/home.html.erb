@@ -9,99 +9,238 @@
     <div class="small-container">
       <div id="menu">
         <a href="#" class="menu_item">Accueil</a>
-        <a href="#" class="menu_item">Programme</a>
-        <a href="#" class="menu_item">Infos pratiques</a>
-        <a href="#" class="menu_item">Liste de mariage</a>
-        <a href="#" class="menu_item">RSVP</a>
+        <a href="#programme" class="menu_item">Programme</a>
+        <a href="#infos" class="menu_item">Infos pratiques</a>
+        <a href="#liste" class="menu_item">Liste de mariage</a>
+        <a href="#rsvp" class="menu_item">RSVP</a>
       </div>
     </div>
   </div>
 </div>
-<section class="bg-grey text-center">
-  <div class="container">
-    <div class="section_title-container">
-      <div class="section_title">
-        <h2>Programme</h2>
-        <div class="heading-line">
-          <div class="line-icon line-icon--bg-grey">
-            <%= image_tag "motif.svg", width: 30 %>
+<div id="programme">
+  <section class="bg-grey text-center">
+    <div class="container">
+      <div class="section_title-container">
+        <div class="section_title">
+          <h2>Programme</h2>
+          <div class="heading-line">
+            <div class="line-icon line-icon--bg-grey">
+              <%= image_tag "motif.svg", width: 30 %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Samedi 22 septembre 2018</h3>
+      <div class="text-center">
+        <div class="program-container">
+          <div class="program-step first-step">
+            <div class="program_item">
+              <%= image_tag "rings.svg", width: 60 %>
+            </div>
+            <div class="program_timeline"><%= image_tag "timelinev2_first.svg" %></div>
+            <div class="program_infos">
+              <span class="gras">11h15</span> - MAIRIE
+              <p class="program_location"><%= image_tag "love_position.svg", width: 20 %> Mairie de Pornichet</p>
+              <p class="no-margin">120 avenue du Général de Gaulle</p>
+              <p class="no-margin">Pornichet</p>
+            </div>
+          </div>
+          <div class="program-step">
+            <div class="program_item">
+              <%= image_tag "diner.svg", width: 60 %>
+             </div>
+            <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+            <div class="program_infos">
+              <span class="gras">12h00</span> - DEJEUNER
+              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Ker Yette</p>
+              <p class="no-margin">41 avenue du littoral</p>
+              <p class="no-margin">Pornichet</p>
+            </div>
+          </div>
+          <div class="program-step">
+            <div class="program_item">
+              <%= image_tag "beach.svg", width: 60 %>
+             </div>
+            <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+            <div class="program_infos">
+              <span class="gras">15h00</span> - QUARTIER LIBRE / PLAGE
+              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Plage de Sainte-Marguerite</p>
+              <p class="no-margin">Pornichet</p>
+            </div>
+          </div>
+          <div class="program-step">
+            <div class="program_item">
+              <%= image_tag "drinks.svg", width: 60 %>
+             </div>
+            <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+            <div class="program_infos">
+              <span class="gras">18h30</span> - COCKTAIL DINATOIRE
+              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Ker Yette</p>
+              <p class="no-margin">41 avenue du littoral</p>
+              <p class="no-margin">Pornichet</p>
+            </div>
+          </div>
+          <div class="program-step last-step">
+            <div class="program_item">
+              <%= image_tag "party.svg", width: 60 %>
+             </div>
+            <div class="program_timeline"><%= image_tag "timelinev2_last.svg" %></div>
+            <div class="program_infos">
+              <span class="gras">22h30</span> - SOIRÉE DANSANTE
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Dimanche 23 septembre 2018</h3>
+      <div class="text-center">
+        <div class="program-container">
+          <div class="program-step">
+            <div class="program_item">
+              <%= image_tag "brunch.svg", width: 60 %>
+             </div>
+             <div class="program_timeline"><%= image_tag "spot.svg" %></div>
+            <div class="program_infos">
+              <span class="gras">11h30</span> - PETIT DEJEUNER / DEJEUNER / DEBRIEF
+              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Ker Yette</p>
+              <p class="no-margin">41 avenue du littoral</p>
+              <p class="no-margin">Pornichet</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <h1>Samedi 22 septembre 2018</h1>
-    <div class="text-center">
-      <div class="program-container">
-        <div class="program-step first-step">
-          <div class="program_item">
-            <%= image_tag "rings.svg", width: 80 %>
-          </div>
-          <div class="program_item program_timeline"><%= image_tag "timeline_first.svg" %></div>
-          <div class="program_infos">
-            <span class="gras">11h15</span> - MAIRIE
-            <h5 style="line-height: 28px;"><%= image_tag "love_position.svg", width: 20 %> Mairie de Pornichet</h5>
-            <p>120 avenue du Général de Gaulle</p>
-          </div>
-        </div>
-        <div class="program-step">
-          <div class="program_item">
-            <%= image_tag "diner.svg", width: 80 %>
-           </div>
-          <div class="program_item program_timeline"><%= image_tag "timeline.svg" %></div>
-          <div class="program_infos">
-            <span class="gras">12h00</span> - DEJEUNER
-            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Ker Yette</h5>
-            <p>41 avenue du littoral</p>
-          </div>
-        </div>
-        <div class="program-step">
-          <div class="program_item">
-            <%= image_tag "beach.svg", width: 80 %>
-           </div>
-          <div class="program_item program_timeline"><%= image_tag "timeline.svg" %></div>
-          <div class="program_infos">
-            <span class="gras">15h00</span> - QUARTIER LIBRE / PLAGE
-            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Plage de Sainte-Marguerite</h5>
-          </div>
-        </div>
-        <div class="program-step">
-          <div class="program_item">
-            <%= image_tag "drinks.svg", width: 80 %>
-           </div>
-          <div class="program_item program_timeline"><%= image_tag "timeline.svg" %></div>
-          <div class="program_infos">
-            <span class="gras">18h30</span> - COCKTAIL DINATOIRE
-            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Ker Yette</h5>
-            <p>41 avenue du littoral</p>
-          </div>
-        </div>
-        <div class="program-step last-step">
-          <div class="program_item">
-            <%= image_tag "party.svg", width: 80 %>
-           </div>
-          <div class="program_item program_timeline"><%= image_tag "timeline_last.svg" %></div>
-          <div class="program_infos">
-            <span class="gras">22h30</span> - SOIRÉE DANSANTE
+  </section>
+</div>
+<div id="infos">
+  <section>
+    <div class="container">
+      <div class="section_title-container">
+        <div class="section_title">
+          <h2>Infos pratiques</h2>
+          <div class="heading-line">
+            <div class="line-icon line-icon--bg-white">
+              <%= image_tag "motif.svg", width: 30 %>
+            </div>
           </div>
         </div>
       </div>
+      <div class="infos-container text-center">
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "dress_code.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Dress Code</h5>
+          <p>Prise de tête interdite</p>
+        </div>
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "train.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Gare de Pornichet</h5>
+          <p>10 min à pied de la Mairie</p>
+          <p>10 min en voiture de Ker Yette</p>
+        </div>
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "car.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Parking</h5>
+          <p>De nombreuses places gratuites</p>
+          <p>de parking à proximité de Ker Yette</p>
+        </div>
+      </div>
     </div>
-    <h1>Dimanche 23 septembre 2018</h1>
-    <div class="text-center">
-      <div class="program-container">
-        <div class="program-step">
-          <div class="program_item">
-            <%= image_tag "brunch.svg", width: 80 %>
-           </div>
-           <div class="program_item program_timeline"><%= image_tag "spot.svg" %></div>
-          <div class="program_infos">
-            <span class="gras">11h30</span> - PETIT DEJEUNER / DEJEUNER / DEBRIEF
-            <h5 style="line-height: 28px;"><%= image_tag "position.svg", width: 20 %> Ker Yette</h5>
-            <p>41 avenue du littoral</p>
+  </section>
+</div>
+<div id="liste">
+  <section class="bg-green text-center">
+    <div class="container">
+      <div class="small-container">
+        <div class="section_title-container">
+          <div class="section_title">
+            <h2>Liste de mariage</h2>
+            <div class="heading-line heading-line--white">
+              <div class="line-icon line-icon--bg-green">
+                <%= image_tag "motif.svg", width: 30 %>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="liste-container">
+          <p>Votre présence à nos côtés le jour de notre mariage est le plus beau des cadeaux et nous comble de joie. Vous le savez, nous sommes déjà très gâtés et ne manquons de rien.</p>
+          <p>
+          Cependant, pour ceux qui y tiennent, vous avez la possibilité de nous aider à retaper notre maison pour en faire un vrai nid d'amour, et pour ceux qui trouvent que l'on se ramollit, vous pouvez toujours nous offrir un surf ou une raquette de tennis.
+          </p>
+          <p>
+          Enfin, si cela vous fait plaisir, vous pouvez faire un tour sur la liste en cliquant <a href="#" target="_blank" class="text-grey gras underlined">ici</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="rsvp">
+  <div id="resp-banner">
+    <div class="frame frame--bg-grey">
+      <div class="frame__text">
+        <h2>Votre réponse</h2>
+        <form action="" id="rsvp-form">
+          <label for="name" class="label-upper">Votre nom</label>
+          <input type="text" class="input white-input input-with-submit" id="name">
+          <label for="votre_email" class="label-upper">Votre email</label>
+          <input type="text" class="input white-input input-with-submit" id="votre_email">
+          <h5>Samedi 22 septembre</h5>
+          <p>Serez-vous présent au DEJEUNER ?</p>
+          <div class="checkbox-dot">
+            <input type="checkbox" id="dejeuner_oui">
+            <label for="dejeuner_oui">Oui</label>
+          </div>
+          <div class="checkbox-dot">
+            <input type="checkbox" id="dejeuner_non">
+            <label for="dejeuner_non">Non</label>
+          </div>
+          <div>
+            Combien de personnes ?
+            <input type="number" class="input inline-input">
+            <!-- 1 OU 2 -->
+          </div>
+          <p>Serez-vous présent au COCKTAIL DINATOIRE ?</p>
+          <div class="checkbox-dot">
+            <input type="checkbox" id="cocktail_oui">
+            <label for="cocktail_oui">Oui</label>
+          </div>
+          <div class="checkbox-dot">
+            <input type="checkbox" id="cocktail_non">
+            <label for="cocktail_non">Non</label>
+          </div>
+          <div>
+            Combien de personnes ?
+            <input type="number" class="input inline-input">
+            <!-- 1 OU 2 -->
+          </div>
+          <h5>Dimanche 23 septembre</h5>
+          <p>Serez-vous présent au DEBRIEF LE DIMANCHE</p>
+          <div class="checkbox-dot">
+            <input type="checkbox" id="brunch_oui">
+            <label for="brunch_oui">Oui</label>
+          </div>
+          <div class="checkbox-dot">
+            <input type="checkbox" id="brunch_non">
+            <label for="brunch_non">Non</label>
+          </div>
+          <div>
+            Combien de personnes ?
+            <input type="number" class="input inline-input">
+            <!-- 1 OU 2 -->
+          </div>
+          <%= link_to "Valider", root_path, class: "btn btn-green" %>
+        </form>
       </div>
     </div>
   </div>
-</section>
-<br><br><br><br>
+</div>

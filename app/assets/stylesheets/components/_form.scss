@@ -13,6 +13,9 @@ form {
     outline: none;
   }
 }
+#rsvp-form input {
+  height: 35px;
+}
 .grey-input {
   border: 1px solid $grey-background;
   color: $grey;
@@ -53,4 +56,9 @@ form {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+.inline-input {
+  width: auto;
+  margin-left: 24px;
 }

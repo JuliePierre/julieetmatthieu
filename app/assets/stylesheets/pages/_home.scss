@@ -1,22 +1,38 @@
 // Specific CSS for your home-page
 #home-banner {
-  background-image: asset-url("invitation.jpg");
+  background-image: asset-url("invitation-v2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 75vh;
+  height: 90vh;
   width: 100vw;
   text-align: center;
 }
 #home-intro {
   padding-top: 2vh;
-  color: #34363e;
+  color: $grey;
   h1 {
     margin-bottom: 0;
     font-size: 80px;
+    color: white;
+    text-shadow: 3px 5px 2px $grey;
   }
   h2 {
     margin-top: 0;
     font-size: 44px;
+    color: white;
+    text-shadow: 3px 5px 2px $grey;
   }
+}
+#resp-banner {
+  background-image: asset-url("reponse.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

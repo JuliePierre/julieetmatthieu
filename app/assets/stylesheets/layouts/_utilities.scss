@@ -4,9 +4,22 @@
 .gras {
   font-weight: 700;
 }
+.text-grey {
+  color: $grey;
+}
+.no-margin {
+  margin: 0;
+}
+.underlined {
+  text-decoration: underline;
+}
 // backgrounds
 .bg-grey {
   background-color: $grey-background;
+}
+.bg-green {
+  background-color: $green;
+  color: white;
 }
 // encarts
 .frame {

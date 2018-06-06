@@ -1,12 +1,13 @@
+#programme h3 {
+  font-size: 22px;
+  font-family: 'Muli', 'sans-serif';
+  font-weight: 700;
+}
 .program-container {
   width: 700px;
   margin: auto;
-  margin-top: 96px;
+  margin-top: 48px;
   margin-bottom: 96px;
-  p {
-    font-size: 14px;
-    margin: 0;
-  }
 }
 .program-step {
   display: flex;
@@ -20,14 +21,29 @@
   align-items: flex-end;
 }
 .program_item {
-  flex: 0 0 25%;
+  flex: 0 0 33%;
+  text-align: right;
+}
+.program_timeline {
+  flex: 0 0 33%;
 }
 .program_infos {
-  flex: 0 0 50%;
+  flex: 0 0 33%;
+  text-align: left;
+  p {
+    line-height: 28px;
+    font-size: 14px;
+    font-family: "Kalam", "cursive";
+  }
+}
+.program_location {
+  margin-top: 14px;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 .program_timeline {
   padding-bottom: 0;
   img {
-    width: 60px;
+    width: 35px;
   }
 }
