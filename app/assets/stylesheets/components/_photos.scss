@@ -1,0 +1,15 @@
+.photos-container {
+  display: flex;
+}
+#julie {
+  background-size: cover;
+  background-position: right center;
+  flex: 0 0 50%;
+  height: 500px;
+}
+#matthieu {
+  background-size: cover;
+  background-position: left center;
+  flex: 0 0 50%;
+  height: 500px;
+}

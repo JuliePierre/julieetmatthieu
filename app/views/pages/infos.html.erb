@@ -1,0 +1,101 @@
+<div id="infos-banner">
+  <div id="infos-intro">
+    <h1>Pornichet</h1>
+  </div>
+</div>
+<div id="nav">
+  <div class="container">
+    <div class="small-container">
+      <div class="menu" id="infos-menu">
+        <%= link_to "Retour à l'accueil", root_path, class: "menu_item" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="carte">
+  <section>
+    <div class="container">
+      <div class="section_title-container">
+        <div class="section_title">
+          <h2>Où est-ce ?</h2>
+          <div class="heading-line">
+            <div class="line-icon line-icon--bg-white">
+              <%= image_tag "motif.svg", width: 30 %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>"></div>
+    </div>
+  </section>
+</div>
+<div id="logements">
+  <section class="bg-grey text-center">
+    <div class="container">
+      <div class="section_title-container">
+        <div class="section_title">
+          <h2>Les logements</h2>
+          <div class="heading-line">
+            <div class="line-icon line-icon--bg-grey">
+              <%= image_tag "motif.svg", width: 30 %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logements-container">
+        <h5 class="text-green">Airbnb</h5>
+        <a href="https://www.airbnb.fr/s/homes?refinement_paths%5B%5D=%2Fhomes&query=41%20Avenue%20du%20Littoral%2C%20Pornichet%2C%20France&allow_override%5B%5D=&checkin=2018-09-22&checkout=2018-09-23&s_tag=ZsSkWkoF" class="link-upper" target="_blank">Voir les logements Airbnb</a>
+        <br>
+        <br>
+
+        <h5 class="text-green">Hôtels & Appart hôtel</h5>
+        <p><a href="https://www.tripadvisor.fr/Hotel_Review-g196655-d4414169-Reviews-Hotel_Chateau_des_Tourelles-Pornichet_Loire_Atlantique_Pays_de_la_Loire.html" class="link-upper" target="_blank">Château des Tourelles</a> - 30 minutes à pied de Ker Yette</p>
+        <p><a href="https://www.booking.com/hotel/fr/azureva-pornichet-baie-de-la-baule.fr.html?aid=356982;label=gog235jc-city-fr-fr-pornichet-unspec-fr-com-L%3Afr-O%3AosSx-B%3Achrome-N%3AXX-S%3Abo-U%3Ac-H%3As;sid=6db61b57ce655bc511ef0fa5df8d36fb;checkin=2018-09-21;checkout=2018-09-23;room1=A,A;homd=1;srpvid=f13b86c771aa005c;srepoch=1521400249%20;atlas_src=sr_iw_btn%20#availability" class="link-upper" target="_blank">Azureva</a> - 10 minutes à pied de Ker Yette</p>
+        <p><a href="https://www.booking.com/hotel/fr/de-la-plage-saint-nazaire.fr.html" class="link-upper" target="_blank">Hôtel de la plage à Saint Marc</a> - 35 minutes à pied de Ker Yette</p>
+        <p><a href="https://www.booking.com/hotel/fr/le-belouga.fr.html?aid=356982;label=gog235jc-city-fr-fr-pornichet-unspec-fr-com-L%3Afr-O%3AosSx-B%3Achrome-N%3AXX-S%3Abo-U%3Ac-H%3As;sid=6db61b57ce655bc511ef0fa5df8d36fb;checkin=2018-09-21;checkout=2018-09-23;room1=A,A;homd=1;srpvid=f13b86c771aa005c;srepoch=1521400262%20;atlas_src=sr_iw_btn%20#availability" class="link-upper" target="_blank">Le Belouga</a> - 30 minutes à pied de Ker Yette</p>
+        <p><a href="https://www.oceaniahotels.com/h/hotel-escale-oceania-pornichet-la-baule/presentation" class="link-upper" target="_blank">Oceania</a> - 40 minutes à pied de Ker Yette</p>
+        <a href="https://www.accorhotels.com/fr/hotel-1171-ibis-la-baule-pornichet-plage/index.shtml#origin=ibis" class="link-upper" target="_blank">Ibis</a> - 45 minutes à pied de Ker Yette / 10 minutes en voiture</p>
+        <br>
+
+        <h5 class="text-green">Campings</h5>
+        <p><a href="https://naxiresa.inaxel.com/etape2-sejours.php?destination=&compte=belair&arrivalDate=21%2F09%2F2018&departureDate=23%2F09%2F2018&pt=2&nb=4" class="link-upper" target="_blank">Bel air</a> - 20 minutes à pied de Ker Yette</p>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="more">
+  <section class="bg-green text-center">
+    <div class="container">
+      <div class="section_title-container">
+        <div class="section_title">
+          <h2>Comment y aller ?</h2>
+          <br>
+          <%= image_tag "train.svg", width: 50 %>
+        </div>
+      </div>
+      <div class="small-container">
+        <div>
+          <h5>Gare de Pornichet</h5>
+          <p>A 2 pas de la mairie et à 10 minutes en voiture de Ker Yette mais les trains sont moins fréquents.</p>
+          <br>
+          <h5>Gare de Saint-Nazaire</h5>
+          <p>A 10 minutes en voiture de la mairie et 15 minutes en voiture de Ker Yette et trains plus fréquents.</p>
+          <br>
+          <div>
+          <a href="https://www.oui.sncf/billet-train" target="_blank" class="link-upper text-white">Voir les trains</a>
+          </div>
+          <br>
+          <p>Les billets pour ces dates ne sont pas encore ouverts. La réservation devrait être ouverte 3 mois avant, autrement dit le 22 juin.</p>
+          <div>
+          <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=N3IxYjN2djQzYmIwbHVlMGFtZDBnNmVnMHMganVsaWUucGllcnJlM0Bt&amp;tmsrc=julie.pierre3%40gmail.com" class="link-upper text-white">Ajouter à mon calendrier Google</a>
+          </div>
+        </div>
+        <br>
+        <div>
+          <h5>En voiture</h5>
+          <a href="https://www.google.fr/maps/dir//41+Avenue+du+Littoral,+44380+Pornichet,+France/@47.2433451,-2.3169242,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x48056824eb0561ef:0x4dfe7949c1e869ff!2m2!1d-2.3125468!2d47.2433452!3e0" target="_blank" class="link-upper text-white">Calculer itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

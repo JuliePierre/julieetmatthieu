@@ -1,0 +1,28 @@
+#infos-banner {
+  background-image: asset-url("reponse.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 75vh;
+  width: 100vw;
+  text-align: center;
+}
+#infos-intro {
+  padding-top: 10vh;
+  color: #34363e;
+  h1 {
+    margin-bottom: 0;
+    font-size: 80px;
+    color: white;
+    text-shadow: 3px 5px 2px $grey;
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 44px;
+    color: white;
+    text-shadow: 3px 5px 2px $grey;
+  }
+}
+#infos-menu {
+  justify-content: space-around;
+}

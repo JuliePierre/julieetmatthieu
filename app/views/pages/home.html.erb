@@ -7,7 +7,7 @@
 <div id="nav">
   <div class="container">
     <div class="small-container">
-      <div id="menu">
+      <div class="menu">
         <a href="#" class="menu_item">Accueil</a>
         <a href="#programme" class="menu_item">Programme</a>
         <a href="#infos" class="menu_item">Infos pratiques</a>
@@ -35,54 +35,54 @@
         <div class="program-container">
           <div class="program-step first-step">
             <div class="program_item">
-              <%= image_tag "rings.svg", width: 60 %>
+              <%= image_tag "blue-rings.svg", width: 60 %>
             </div>
             <div class="program_timeline"><%= image_tag "timelinev2_first.svg" %></div>
             <div class="program_infos">
               <span class="gras">11h15</span> - MAIRIE
-              <p class="program_location"><%= image_tag "love_position.svg", width: 20 %> Mairie de Pornichet</p>
+              <p class="program_location"><%= image_tag "blue-love_position.svg", width: 20 %> Mairie de Pornichet</p>
               <p class="no-margin">120 avenue du Général de Gaulle</p>
               <p class="no-margin">Pornichet</p>
             </div>
           </div>
           <div class="program-step">
             <div class="program_item">
-              <%= image_tag "diner.svg", width: 60 %>
+              <%= image_tag "blue-diner.svg", width: 60 %>
              </div>
             <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
             <div class="program_infos">
               <span class="gras">12h00</span> - DEJEUNER
-              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Ker Yette</p>
+              <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
               <p class="no-margin">41 avenue du littoral</p>
               <p class="no-margin">Pornichet</p>
             </div>
           </div>
           <div class="program-step">
             <div class="program_item">
-              <%= image_tag "beach.svg", width: 60 %>
+              <%= image_tag "blue-beach.svg", width: 60 %>
              </div>
             <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
             <div class="program_infos">
               <span class="gras">15h00</span> - QUARTIER LIBRE / PLAGE
-              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Plage de Sainte-Marguerite</p>
+              <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Plage de Sainte-Marguerite</p>
               <p class="no-margin">Pornichet</p>
             </div>
           </div>
           <div class="program-step">
             <div class="program_item">
-              <%= image_tag "drinks.svg", width: 60 %>
+              <%= image_tag "blue-drinks.svg", width: 60 %>
              </div>
             <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
             <div class="program_infos">
               <span class="gras">18h30</span> - COCKTAIL DINATOIRE
-              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Ker Yette</p>
+              <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
               <p class="no-margin">41 avenue du littoral</p>
               <p class="no-margin">Pornichet</p>
             </div>
           </div>
           <div class="program-step last-step">
             <div class="program_item">
-              <%= image_tag "party.svg", width: 60 %>
+              <%= image_tag "blue-party.svg", width: 60 %>
              </div>
             <div class="program_timeline"><%= image_tag "timelinev2_last.svg" %></div>
             <div class="program_infos">
@@ -96,17 +96,20 @@
         <div class="program-container">
           <div class="program-step">
             <div class="program_item">
-              <%= image_tag "brunch.svg", width: 60 %>
+              <%= image_tag "blue-brunch.svg", width: 60 %>
              </div>
              <div class="program_timeline"><%= image_tag "spot.svg" %></div>
             <div class="program_infos">
               <span class="gras">11h30</span> - PETIT DEJEUNER / DEJEUNER / DEBRIEF
-              <p class="program_location"><%= image_tag "position.svg", width: 20 %> Ker Yette</p>
+              <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
               <p class="no-margin">41 avenue du littoral</p>
               <p class="no-margin">Pornichet</p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center">
+        <%= link_to "Voir sur la carte", root_path, class: "btn btn-bordered-green" %>
       </div>
     </div>
   </section>
@@ -143,6 +146,8 @@
           <h5 class="gras">Gare de Pornichet</h5>
           <p>10 min à pied de la Mairie</p>
           <p>10 min en voiture de Ker Yette</p>
+          <br>
+          <%= link_to "En savoir plus", root_path, class: "link-upper" %>
         </div>
         <div class="infos_item">
           <div class="infos_icon-container">
@@ -154,9 +159,29 @@
           <p>De nombreuses places gratuites</p>
           <p>de parking à proximité de Ker Yette</p>
         </div>
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "bed.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Logements</h5>
+          <p>Plusieurs options possibles</p>
+          <br>
+          <br>
+          <%= link_to "Voir les logements", root_path, class: "link-upper" %>
+        </div>
       </div>
     </div>
   </section>
+</div>
+<div id="photos">
+  <div class="photos-container">
+    <div style="background-image: url('<%= image_path "julie.jpg" %>')" id="julie">
+    </div>
+    <div style="background-image: url('<%= image_path "matthieu.jpg" %>')" id="matthieu">
+    </div>
+  </div>
 </div>
 <div id="liste">
   <section class="bg-green text-center">
@@ -173,12 +198,12 @@
           </div>
         </div>
         <div class="liste-container">
-          <p>Votre présence à nos côtés le jour de notre mariage est le plus beau des cadeaux et nous comble de joie. Vous le savez, nous sommes déjà très gâtés et ne manquons de rien.</p>
+          <p>Votre présence à nos côtés le jour de notre mariage est le plus beau des cadeaux et nous comble de joie. Nous sommes déjà très gâtés.</p>
           <p>
-          Cependant, pour ceux qui y tiennent, vous avez la possibilité de nous aider à retaper notre maison pour en faire un vrai nid d'amour, et pour ceux qui trouvent que l'on se ramollit, vous pouvez toujours nous offrir un surf ou une raquette de tennis.
+          Cependant, pour ceux qui y tiennent, vous avez la possibilité de nous aider à retaper notre maison pour en faire un superbe nid d'amour, et pour ceux qui trouvent que l'on se ramollit, vous pouvez toujours nous offrir un surf ou une raquette de tennis.
           </p>
           <p>
-          Enfin, si cela vous fait plaisir, vous pouvez faire un tour sur la liste en cliquant <a href="#" target="_blank" class="text-grey gras underlined">ici</a>.</p>
+          Si cela vous fait donc plaisir, vous pouvez faire un tour sur la liste en cliquant <a href="#" target="_blank" class="text-grey gras underlined">ici</a>.</p>
         </div>
       </div>
     </div>
