@@ -8,6 +8,9 @@
   margin: auto;
   margin-top: 48px;
   margin-bottom: 96px;
+  @media (max-width: $small-screen) {
+    width: 100%;
+  }
 }
 .program-step {
   display: flex;
@@ -23,13 +26,27 @@
 .program_item {
   flex: 0 0 33%;
   text-align: right;
+  @media (max-width: $small-screen) {
+    flex: 0 0 20%;
+  }
+  img {
+    @media (max-width: $small-screen) {
+      width: 45px;
+    }
+  }
 }
 .program_timeline {
   flex: 0 0 33%;
+  @media (max-width: $small-screen) {
+    flex: 0 0 20%;
+  }
 }
 .program_infos {
   flex: 0 0 33%;
   text-align: left;
+  @media (max-width: $small-screen) {
+    flex: 0 0 60%;
+  }
   p {
     line-height: 28px;
     font-size: 14px;

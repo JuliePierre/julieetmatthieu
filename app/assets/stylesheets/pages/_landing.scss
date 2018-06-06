@@ -9,6 +9,9 @@
 }
 #landing-form {
   padding-top: 45vh;
+  @media (max-width: $small-screen) {
+    padding: 50% 45px 45px 45px;
+  }
 }
 #landing-intro {
   padding-top: 2vh;
@@ -18,11 +21,17 @@
     font-size: 80px;
     color: white;
     text-shadow: 3px 5px 2px $grey;
+    @media (max-width: $small-screen) {
+      font-size: 55px;
+    }
   }
   h2 {
     margin-top: 0;
     font-size: 44px;
     color: white;
     text-shadow: 3px 5px 2px $grey;
+    @media (max-width: $small-screen) {
+      font-size: 22px;
+    }
   }
 }

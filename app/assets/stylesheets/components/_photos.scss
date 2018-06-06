@@ -1,15 +1,26 @@
 .photos-container {
   display: flex;
+  @media (max-width: $small-screen) {
+    flex-wrap: wrap;
+  }
 }
 #julie {
   background-size: cover;
   background-position: right center;
   flex: 0 0 50%;
   height: 500px;
+  @media (max-width: $small-screen) {
+    flex: 0 0 100%;
+    background-position: center center;
+  }
 }
 #matthieu {
   background-size: cover;
   background-position: left center;
   flex: 0 0 50%;
   height: 500px;
+  @media (max-width: $small-screen) {
+    flex: 0 0 100%;
+    background-position: right center;
+  }
 }

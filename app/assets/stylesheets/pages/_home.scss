@@ -7,6 +7,9 @@
   height: 90vh;
   width: 100vw;
   text-align: center;
+  @media (max-width: $small-screen) {
+    height: 70vh;
+  }
 }
 #home-intro {
   padding-top: 2vh;
@@ -16,12 +19,23 @@
     font-size: 80px;
     color: white;
     text-shadow: 3px 5px 2px $grey;
+    @media (max-width: $small-screen) {
+      font-size: 55px;
+    }
   }
   h2 {
     margin-top: 0;
     font-size: 44px;
     color: white;
     text-shadow: 3px 5px 2px $grey;
+    @media (max-width: $small-screen) {
+      font-size: 22px;
+    }
+  }
+}
+#nav {
+  @media (max-width: $small-screen) {
+    text-align: center;
   }
 }
 #resp-banner {

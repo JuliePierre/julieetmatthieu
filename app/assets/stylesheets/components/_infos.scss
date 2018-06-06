@@ -5,6 +5,9 @@
     font-size: 14px;
     margin: 0;
   }
+  @media (max-width: $small-screen) {
+    flex-wrap: wrap;
+  }
 }
 .infos_icon {
   background-color: $green;
@@ -20,4 +23,8 @@
   flex-direction: column;
   align-items: center;
   flex: 0 0 25%;
+  @media (max-width: $small-screen) {
+    flex: 0 0 100%;
+    margin-bottom: 44px;
+  }
 }
