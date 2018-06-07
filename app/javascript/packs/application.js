@@ -1,4 +1,4 @@
 import "bootstrap";
 
-import { popUp } from "../components/popup";
-popUp();
+// import { popUp } from "../components/popup";
+// popUp();

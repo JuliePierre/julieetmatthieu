@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def wedding
     email = params["email"] || session[:email]
-    email.downcase!
     if email.blank?
       session[:email] = nil
       session[:user] = "not_invited"
@@ -9,6 +8,7 @@ class PagesController < ApplicationController
       @notification = "Vous n'avez pas renseigné votre adresse email. Merci d'utiliser celle sur laquelle vous avez reçu le faire-part."
       render :landing
     else
+      email.downcase!
       session[:email] = params["email"]
       if is_invited?(email.downcase)
         @user_number = invitations(email)
