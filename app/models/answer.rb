@@ -1,4 +1,6 @@
 class Answer < ApplicationRecord
+  validates :name, :email, presence: true
+
   after_create :send_notification
 
   private

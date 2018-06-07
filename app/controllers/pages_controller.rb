@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   def wedding
-    email = params["email"] || session[:email]
-    puts "session : #{session[:email]}"
-    puts "les params : #{params["email"]}"
+    email = params["email"].downcase || session[:email].downcase
     if email.blank?
+      session[:email] = ""
+      session[:user] = "not_invited"
       @notification = "Vous n'avez pas renseigné votre adresse email. Merci d'utiliser celle sur laquelle vous avez reçu le faire-part."
       render :landing
     else
@@ -17,6 +17,7 @@ class PagesController < ApplicationController
         @notification = "Nous ne reconnaissons pas votre adresse email, vérifiez que vous utilisez bien l'adresse email sur laquelle vous avez reçu le faire-part. Merci beaucoup !"
         render :landing
       end
+    session[:user] = @user_type
     end
   end
 
@@ -24,6 +25,9 @@ class PagesController < ApplicationController
   end
 
   def landing
+    puts "Session : #{session}"
+    puts "Session[:email] : #{session[:email]}"
+    puts "Session[:user] : #{session[:user]}"
   end
 
   def infos
@@ -54,11 +58,14 @@ class PagesController < ApplicationController
       nb_brunch: params[:nb_brunch].to_i
     }
     answer = Answer.new(attributes)
+    puts "user : #{@user_type}"
+    puts "session[:user] : #{session[:user]}"
+    @user_type = session[:user]
     if answer.save
       @notification = "Nous avons bien enregistré votre réponse, nous vous en remercions."
       render :wedding
     else
-      @notification = "Nous n'avons pas pu enregistrer votre réponse, merci de ré-essayer ou nous contacter directement par email à julieetmatthieu.mariage@gmail.com"
+      @notification = "Nous n'avons pas pu enregistrer votre réponse, merci de vérifier vos informations ou nous contacter directement par email à julieetmatthieu.mariage@gmail.com"
       render :wedding
     end
   end
