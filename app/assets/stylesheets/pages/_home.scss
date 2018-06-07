@@ -7,6 +7,9 @@
   height: 90vh;
   width: 100vw;
   text-align: center;
+  @media (max-width: $medium-screen) {
+    height: 88vh;
+  }
   @media (max-width: $small-screen) {
     height: 70vh;
   }
@@ -14,6 +17,12 @@
 #home-intro {
   padding-top: 2vh;
   color: $grey;
+  @media (max-width: $medium-screen) {
+    padding-top: 8vh;
+  }
+  @media (max-width: $small-screen) {
+    padding-top: 2vh;
+  }
   h1 {
     margin-bottom: 0;
     font-size: 80px;
@@ -49,4 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  form {
+    font-size: 14px;
+  }
 }

@@ -5,7 +5,7 @@ section {
 .small-container {
   width: 750px;
   margin: auto;
-  @media (max-width: $small-screen) {
+  @media (max-width: $medium-screen) {
     width: 100%;
   }
 }

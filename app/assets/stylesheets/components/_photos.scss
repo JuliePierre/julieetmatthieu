@@ -1,17 +1,21 @@
 .photos-container {
   display: flex;
-  @media (max-width: $small-screen) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 #julie {
   background-size: cover;
   background-position: right center;
   flex: 0 0 50%;
   height: 500px;
+  @media (max-width: $medium-screen) {
+    flex: 0 0 100%;
+    background-position: center center;
+    height: 450px;
+  }
   @media (max-width: $small-screen) {
     flex: 0 0 100%;
     background-position: center center;
+    height: 500px;
   }
 }
 #matthieu {
@@ -19,8 +23,14 @@
   background-position: left center;
   flex: 0 0 50%;
   height: 500px;
+  @media (max-width: $medium-screen) {
+    flex: 0 0 100%;
+    background-position: right center;
+    height: 450px;
+  }
   @media (max-width: $small-screen) {
     flex: 0 0 100%;
     background-position: right center;
+    height: 500px;
   }
 }

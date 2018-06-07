@@ -16,6 +16,10 @@ form {
 #rsvp-form input {
   height: 35px;
 }
+#rsvp-form input[type="number"] {
+  height: 28px;
+  max-width: 60px;
+}
 .grey-input {
   border: 1px solid $grey-background;
   color: $grey;

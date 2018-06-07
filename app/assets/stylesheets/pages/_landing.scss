@@ -16,6 +16,12 @@
 #landing-intro {
   padding-top: 2vh;
   color: #34363e;
+  @media (max-width: $medium-screen) {
+    padding-top: 8vh;
+  }
+  @media (max-width: $small-screen) {
+    padding-top: 2vh;
+  }
   h1 {
     margin-bottom: 0;
     font-size: 80px;
