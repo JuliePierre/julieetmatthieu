@@ -283,6 +283,14 @@
 </div>
 <!-- Deux formulaires -->
 <div id="rsvp">
+  <!-- 1 OU 2 -->
+  <% if @user_number == 3 %>
+    <% options = options_for_select([['1', 1], ['2', 2], ['3', 3]]) %>
+  <% elsif @user_number == 2 %>
+    <% options = options_for_select([['1', 1], ['2', 2]]) %>
+  <% else %>
+    <% options = options_for_select([['1', 1]]) %>
+  <% end %>
   <div id="resp-banner">
     <div class="frame frame--bg-grey">
       <div class="frame__text">
@@ -305,10 +313,9 @@
               <input type="checkbox" name="answer_dejeuner" id="dejeuner_non" value="non">
               <label for="dejeuner_non">Non</label>
             </div>
-            <div>
+            <div class="form_number">
               Combien de personnes ?
-              <input type="number" name="nb_dejeuner" class="input inline-input">
-              <!-- 1 OU 2 -->
+              <%= select_tag "nb_dejeuner", options, class: "input inline-input" %>
             </div>
             <p>Serez-vous présent au COCKTAIL DINATOIRE ?</p>
             <div class="checkbox-dot">
@@ -319,10 +326,9 @@
               <input type="checkbox" name="answer_diner" id="cocktail_non" value="non">
               <label for="cocktail_non">Non</label>
             </div>
-            <div>
+            <div class="form_number">
               Combien de personnes ?
-              <input type="number" name="nb_diner" class="input inline-input">
-              <!-- 1 OU 2 -->
+              <%= select_tag "nb_dejeuner", options, class: "input inline-input" %>
             </div>
             <h5>Dimanche 23 septembre</h5>
             <p>Serez-vous présent au DEBRIEF LE DIMANCHE</p>
@@ -334,10 +340,9 @@
               <input type="checkbox" name="answer_brunch" id="brunch_non" value="non">
               <label for="brunch_non">Non</label>
             </div>
-            <div>
+            <div class="form_number">
               Combien de personnes ?
-              <input type="number" name="nb_brunch" class="input inline-input">
-              <!-- 1 OU 2 -->
+              <%= select_tag "nb_dejeuner", options, class: "input inline-input" %>
             </div>
             <%= submit_tag "Valider", class: "btn btn-green" %>
           <% end %>
@@ -360,10 +365,9 @@
               <input type="checkbox" name="answer_diner" id="cocktail_non" value="non">
               <label for="cocktail_non">Non</label>
             </div>
-            <div>
+            <div class="form_number">
               Combien de personnes ?
-              <input type="number" name="nb_diner" class="input inline-input">
-              <!-- 1 OU 2 -->
+              <%= select_tag "nb_dejeuner", options, class: "input inline-input" %>
             </div>
             <h5>Dimanche 23 septembre</h5>
             <p>Serez-vous présent au DEBRIEF LE DIMANCHE</p>
@@ -375,10 +379,9 @@
               <input type="checkbox" name="answer_brunch" id="brunch_non" value="non">
               <label for="brunch_non">Non</label>
             </div>
-            <div>
+            <div class="form_number">
               Combien de personnes ?
-              <input type="number" name="nb_brunch" class="input inline-input">
-              <!-- 1 OU 2 -->
+              <%= select_tag "nb_dejeuner", options, class: "input inline-input" %>
             </div>
             <%= submit_tag "Valider", class: "btn btn-green" %>
           <% end %>

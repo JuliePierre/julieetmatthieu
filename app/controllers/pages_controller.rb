@@ -1,13 +1,20 @@
 class PagesController < ApplicationController
   def wedding
-    email = params["email"].downcase || session[:email].downcase
+    email = params["email"] || session[:email]
+    email.downcase!
     if email.blank?
-      session[:email] = ""
+      session[:email] = nil
       session[:user] = "not_invited"
+      session[:number] = 1
       @notification = "Vous n'avez pas renseigné votre adresse email. Merci d'utiliser celle sur laquelle vous avez reçu le faire-part."
       render :landing
     else
-    session[:email] = session[:email] || params["email"]
+      session[:email] = params["email"]
+      if is_invited?(email.downcase)
+        @user_number = invitations(email)
+        session[:number] = @user_number
+      end
+
       if is_invited?(email) && is_invited_to_lunch?(email)
         @user_type = "lunch_invited"
       elsif is_invited?(email)
@@ -25,9 +32,6 @@ class PagesController < ApplicationController
   end
 
   def landing
-    puts "Session : #{session}"
-    puts "Session[:email] : #{session[:email]}"
-    puts "Session[:user] : #{session[:user]}"
   end
 
   def infos
@@ -58,9 +62,8 @@ class PagesController < ApplicationController
       nb_brunch: params[:nb_brunch].to_i
     }
     answer = Answer.new(attributes)
-    puts "user : #{@user_type}"
-    puts "session[:user] : #{session[:user]}"
     @user_type = session[:user]
+    @user_number = session[:number]
     if answer.save
       @notification = "Nous avons bien enregistré votre réponse, nous vous en remercions."
       render :wedding
@@ -80,6 +83,27 @@ class PagesController < ApplicationController
   def is_invited_to_lunch?(email)
     load_list
     @lunch_list.include?(email)
+  end
+
+  def invitations(email)
+    load_invitations
+    if @one_list.include?(email)
+      return 1
+    elsif @two_list.include?(email)
+      return 2
+    elsif @three_list.include?(email)
+      return 3
+    else
+      return 0
+    end
+  end
+
+  def load_invitations
+    filepath = Rails.root.join('db', 'numbers.yml')
+    my_yaml = YAML.load_file(filepath)
+    @one_list = my_yaml[1]
+    @two_list = my_yaml[2]
+    @three_list = my_yaml[3]
   end
 
   def load_list

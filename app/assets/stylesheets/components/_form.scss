@@ -23,6 +23,17 @@ form {
 #rsvp-form input[type="submit"] {
   height: auto;
 }
+#rsvp-form select {
+  height: auto;
+  width: 45px;
+  border-radius: 0;
+  padding-left: 15px;
+  background-color: white !important;
+  border: none !important;
+}
+.form_number {
+  margin-top: 12px;
+}
 .grey-input {
   border: 1px solid $grey-background;
   color: $grey;
