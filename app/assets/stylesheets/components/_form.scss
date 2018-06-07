@@ -20,6 +20,9 @@ form {
   height: 28px;
   max-width: 60px;
 }
+#rsvp-form input[type="submit"] {
+  height: auto;
+}
 .grey-input {
   border: 1px solid $grey-background;
   color: $grey;

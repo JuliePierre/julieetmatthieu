@@ -6,12 +6,12 @@
   <div id="landing-form">
     <div class="frame frame--bg-grey">
       <div class="frame__text">
-        <p>Veuillez renseigner votre adresse email pour accéder au contenu du site</p>
-        <form action="">
+        <p>Veuillez renseigner votre adresse email afin de pouvoir entrer sur le site.</p>
+        <%= form_tag "/mariage", method: :get do %>
           <label for="email" class="label-upper">Email</label>
-          <input type="text" class="input white-input input-with-submit" id="email">
-          <%= link_to "Valider", root_path, class: "btn btn-green" %>
-        </form>
+          <input type="text" name="email" class="input white-input input-with-submit" id="email">
+          <%= submit_tag "Valider", class: "btn btn-green" %>
+        <% end %>
       </div>
     </div>
   </div>

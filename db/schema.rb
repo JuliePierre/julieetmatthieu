@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_06_07_081617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.boolean "answer_dejeuner"
+    t.boolean "answer_diner"
+    t.boolean "answer_brunch"
+    t.integer "nb_dejeuner"
+    t.integer "nb_diner"
+    t.integer "nb_brunch"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

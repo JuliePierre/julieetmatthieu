@@ -1,0 +1,390 @@
+<div id="home-banner">
+  <div id="home-intro">
+    <h1>Julie & Matthieu</h1>
+    <h2>22 septembre 2018</h2>
+  </div>
+</div>
+<div id="nav">
+  <div class="container">
+    <div class="small-container">
+      <div class="menu">
+        <a href="#" class="menu_item">Accueil</a>
+        <a href="#programme" class="menu_item">Programme</a>
+        <a href="#infos" class="menu_item">Infos pratiques</a>
+        <a href="#liste" class="menu_item">Liste de mariage</a>
+        <a href="#rsvp" class="menu_item">RSVP</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Deux programmes -->
+<div id="programme">
+  <% if @user_type == "lunch_invited" %>
+    <section class="bg-grey text-center">
+      <div class="container">
+        <div class="section_title-container">
+          <div class="section_title">
+            <h2>Programme</h2>
+            <div class="heading-line">
+              <div class="line-icon line-icon--bg-grey">
+                <%= image_tag "motif.svg", width: 30 %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Samedi 22 septembre 2018</h3>
+        <div class="text-center">
+          <div class="program-container">
+            <div class="program-step first-step">
+              <div class="program_item">
+                <%= image_tag "blue-rings.svg", width: 60 %>
+              </div>
+              <div class="program_timeline"><%= image_tag "timelinev2_first.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">11h15</span> - MAIRIE
+                <p class="program_location"><%= image_tag "blue-love_position.svg", width: 20 %> Mairie de Pornichet</p>
+                <p class="no-margin">120 avenue du Général de Gaulle, Pornichet</p>
+              </div>
+            </div>
+            <div class="program-step">
+              <div class="program_item">
+                <%= image_tag "blue-diner.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">12h00</span> - DEJEUNER
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
+                <p class="no-margin">41 avenue du littoral, Pornichet</p>
+              </div>
+            </div>
+            <div class="program-step">
+              <div class="program_item">
+                <%= image_tag "blue-beach.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">15h00</span> - QUARTIER LIBRE / PLAGE
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Plage de Sainte-Marguerite, Pornichet</p>
+              </div>
+            </div>
+            <div class="program-step">
+              <div class="program_item">
+                <%= image_tag "blue-drinks.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">18h30</span> - COCKTAIL DINATOIRE
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
+                <p class="no-margin">41 avenue du littoral, Pornichet</p>
+              </div>
+            </div>
+            <div class="program-step last-step">
+              <div class="program_item">
+                <%= image_tag "blue-party.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2_last.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">22h30</span> - SOIRÉE DANSANTE
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Dimanche 23 septembre 2018</h3>
+        <div class="text-center">
+          <div class="program-container">
+            <div class="program-step">
+              <div class="program_item">
+                <%= image_tag "blue-brunch.svg", width: 60 %>
+               </div>
+               <div class="program_timeline"><%= image_tag "spot.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">11h30</span> - PETIT DEJEUNER / DEJEUNER / DEBRIEF
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
+                <p class="no-margin">41 avenue du littoral, Pornichet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <%= link_to "Voir sur la carte", infos_path(anchor: "map"), html_options = { class: "btn btn-bordered-green", target: "_blank" } %>
+        </div>
+      </div>
+    </section>
+  <% elsif @user_type == "diner_invited" %>
+    <section class="bg-grey text-center">
+      <div class="container">
+        <div class="section_title-container">
+          <div class="section_title">
+            <h2>Programme</h2>
+            <div class="heading-line">
+              <div class="line-icon line-icon--bg-grey">
+                <%= image_tag "motif.svg", width: 30 %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Samedi 22 septembre 2018</h3>
+        <div class="text-center">
+          <div class="program-container">
+            <div class="program-step first-step">
+              <div class="program_item">
+                <%= image_tag "blue-beach.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2_first.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">15h30</span> - PLAGE
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Plage de Sainte-Marguerite, Pornichet</p>
+              </div>
+            </div>
+            <div class="program-step">
+              <div class="program_item">
+                <%= image_tag "blue-drinks.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">18h30</span> - COCKTAIL DINATOIRE
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
+                <p class="no-margin">41 avenue du littoral, Pornichet</p>
+              </div>
+            </div>
+            <div class="program-step last-step">
+              <div class="program_item">
+                <%= image_tag "blue-party.svg", width: 60 %>
+               </div>
+              <div class="program_timeline"><%= image_tag "timelinev2_last.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">22h30</span> - SOIRÉE DANSANTE
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Dimanche 23 septembre 2018</h3>
+        <div class="text-center">
+          <div class="program-container">
+            <div class="program-step">
+              <div class="program_item">
+                <%= image_tag "blue-brunch.svg", width: 60 %>
+               </div>
+               <div class="program_timeline"><%= image_tag "spot.svg" %></div>
+              <div class="program_infos">
+                <span class="gras">11h30</span> - PETIT DEJEUNER / DEJEUNER / DEBRIEF
+                <p class="program_location"><%= image_tag "blue-position.svg", width: 20 %> Ker Yette</p>
+                <p class="no-margin">41 avenue du littoral, Pornichet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <%= link_to "Voir sur la carte", infos_path(anchor: "map"), html_options = { class: "btn btn-bordered-green", target: "_blank" } %>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</div>
+<div id="infos">
+  <section>
+    <div class="container">
+      <div class="section_title-container">
+        <div class="section_title">
+          <h2>Informations pratiques</h2>
+          <div class="heading-line">
+            <div class="line-icon line-icon--bg-white">
+              <%= image_tag "motif.svg", width: 30 %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infos-container text-center">
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "dress_code.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Dress Code</h5>
+          <p>Prise de tête interdite</p>
+          <p>Messieurs, Matthieu ne sera pas en costume cravate</p>
+        </div>
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "car.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Parking</h5>
+          <p>De nombreuses places gratuites</p>
+          <p>de parking à proximité de Ker Yette</p>
+        </div>
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "bed.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Logements</h5>
+          <p>Plusieurs options possibles</p>
+          <br>
+          <br>
+          <%= link_to "Voir les logements", infos_path(anchor: "logements"), html_otpions = {class: "link-upper", target: "blank" } %>
+        </div>
+        <div class="infos_item">
+          <div class="infos_icon-container">
+            <div class="infos_icon">
+              <%= image_tag "train.svg", width: 80 %>
+            </div>
+          </div>
+          <h5 class="gras">Accès - Gare de Pornichet</h5>
+          <p>10 min en voiture de Ker Yette</p>
+          <% if @user_type == "lunch_invited" %>
+            <p>10 min à pied de la Mairie</p>
+          <% elsif @user_type == "diner_invited" %>
+            <br>
+          <% end %>
+          <br>
+          <%= link_to "En savoir plus", infos_path(anchor: "more"), html_otpions = {class: "link-upper", target: "blank" } %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="photos">
+  <div class="photos-container">
+    <div style="background-image: url('<%= image_path "julie.jpg" %>')" id="julie">
+    </div>
+    <div style="background-image: url('<%= image_path "matthieu.jpg" %>')" id="matthieu">
+    </div>
+  </div>
+</div>
+<div id="liste">
+  <section class="bg-green text-center">
+    <div class="container">
+      <div class="small-container">
+        <div class="section_title-container">
+          <div class="section_title">
+            <h2>Liste de mariage</h2>
+            <div class="heading-line heading-line--white">
+              <div class="line-icon line-icon--bg-green">
+                <%= image_tag "motif.svg", width: 30 %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="liste-container">
+          <p>Votre présence à nos côtés le jour de notre mariage est le plus beau des cadeaux et nous comble de joie. Nous sommes déjà très gâtés.</p>
+          <p>
+          Cependant, pour ceux qui y tiennent, vous avez la possibilité de nous aider à retaper notre maison pour en faire un superbe nid d'amour, et pour ceux qui trouvent que l'on se ramollit, vous pouvez toujours nous offrir un surf ou une raquette de tennis.
+          </p>
+          <p>
+          Si cela vous fait donc plaisir, vous pouvez faire un tour sur la liste en cliquant <a href="#" target="_blank" class="text-grey gras underlined">ici</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Deux formulaires -->
+<div id="rsvp">
+  <div id="resp-banner">
+    <div class="frame frame--bg-grey">
+      <div class="frame__text">
+        <h2>Votre réponse</h2>
+        <p class="small-text">Réponse souhaitée avant le 31 juillet</p>
+        <% if @user_type == "lunch_invited" %>
+          <!-- Formulaire avec déjeuner -->
+          <%= form_tag "/answer", method: :post, id: "rsvp-form" do |f| %>
+            <label for="name" class="label-upper">Votre nom</label>
+            <input type="text" name="nom" class="input white-input input-with-submit" id="name">
+            <label for="votre_email" class="label-upper">Votre email</label>
+            <input type="text" name="email" class="input white-input input-with-submit" id="votre_email">
+            <h5>Samedi 22 septembre</h5>
+            <p>Serez-vous présent au DEJEUNER ?</p>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_dejeuner" id="dejeuner_oui" value="oui">
+              <label for="dejeuner_oui">Oui</label>
+            </div>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_dejeuner" id="dejeuner_non" value="non">
+              <label for="dejeuner_non">Non</label>
+            </div>
+            <div>
+              Combien de personnes ?
+              <input type="number" name="nb_dejeuner" class="input inline-input">
+              <!-- 1 OU 2 -->
+            </div>
+            <p>Serez-vous présent au COCKTAIL DINATOIRE ?</p>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_diner" id="cocktail_oui" value="oui">
+              <label for="cocktail_oui">Oui</label>
+            </div>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_diner" id="cocktail_non" value="non">
+              <label for="cocktail_non">Non</label>
+            </div>
+            <div>
+              Combien de personnes ?
+              <input type="number" name="nb_diner" class="input inline-input">
+              <!-- 1 OU 2 -->
+            </div>
+            <h5>Dimanche 23 septembre</h5>
+            <p>Serez-vous présent au DEBRIEF LE DIMANCHE</p>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_brunch" id="brunch_oui" value="oui">
+              <label for="brunch_oui">Oui</label>
+            </div>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_brunch" id="brunch_non">
+              <label for="brunch_non">Non</label>
+            </div>
+            <div>
+              Combien de personnes ?
+              <input type="number" name="nb_brunch" class="input inline-input">
+              <!-- 1 OU 2 -->
+            </div>
+            <%= submit_tag "Valider", class: "btn btn-green" %>
+          <% end %>
+
+        <% elsif @user_type == "diner_invited" %>
+
+          <!-- Formulaire sans déjeuner -->
+          <%= form_tag "/answer", method: :post, id: "rsvp-form" do |f| %>
+            <label for="name" class="label-upper">Votre nom</label>
+            <input type="text" name="nom" class="input white-input input-with-submit" id="name">
+            <label for="votre_email" class="label-upper">Votre email</label>
+            <input type="text" name="email" class="input white-input input-with-submit" id="votre_email">
+            <h5>Samedi 22 septembre</h5>
+            <p>Serez-vous présent au COCKTAIL DINATOIRE ?</p>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_diner" id="cocktail_oui" value="oui">
+              <label for="cocktail_oui">Oui</label>
+            </div>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_diner" id="cocktail_non" value="non">
+              <label for="cocktail_non">Non</label>
+            </div>
+            <div>
+              Combien de personnes ?
+              <input type="number" name="nb_diner" class="input inline-input">
+              <!-- 1 OU 2 -->
+            </div>
+            <h5>Dimanche 23 septembre</h5>
+            <p>Serez-vous présent au DEBRIEF LE DIMANCHE</p>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_brunch" id="brunch_oui" value="oui">
+              <label for="brunch_oui">Oui</label>
+            </div>
+            <div class="checkbox-dot">
+              <input type="checkbox" name="answer_brunch" id="brunch_non">
+              <label for="brunch_non">Non</label>
+            </div>
+            <div>
+              Combien de personnes ?
+              <input type="number" name="nb_brunch" class="input inline-input">
+              <!-- 1 OU 2 -->
+            </div>
+            <%= submit_tag "Valider", class: "btn btn-green" %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
