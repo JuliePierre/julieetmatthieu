@@ -1,3 +1,24 @@
 #footer {
   padding: 24px 0;
+  position: relative;
+}
+.copyright-container {
+  position: absolute;
+  bottom: 24px;
+  right: 48px;
+  @media (max-width: $small-screen) {
+    text-align: center;
+    margin-top: 24px;
+    position: initial;
+    bottom: 0;
+    right: 0;
+  }
+  a {
+    margin: 0;
+    font-size: 14px;
+  }
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
 }
