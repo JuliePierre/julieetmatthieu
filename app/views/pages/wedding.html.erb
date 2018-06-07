@@ -292,7 +292,7 @@
           <!-- Formulaire avec déjeuner -->
           <%= form_tag "/answer", method: :post, id: "rsvp-form" do |f| %>
             <label for="name" class="label-upper">Votre nom</label>
-            <input type="text" name="nom" class="input white-input input-with-submit" id="name">
+            <input type="text" name="name" class="input white-input input-with-submit" id="name">
             <label for="votre_email" class="label-upper">Votre email</label>
             <input type="text" name="email" class="input white-input input-with-submit" id="votre_email">
             <h5>Samedi 22 septembre</h5>
@@ -331,7 +331,7 @@
               <label for="brunch_oui">Oui</label>
             </div>
             <div class="checkbox-dot">
-              <input type="checkbox" name="answer_brunch" id="brunch_non">
+              <input type="checkbox" name="answer_brunch" id="brunch_non" value="non">
               <label for="brunch_non">Non</label>
             </div>
             <div>
@@ -347,7 +347,7 @@
           <!-- Formulaire sans déjeuner -->
           <%= form_tag "/answer", method: :post, id: "rsvp-form" do |f| %>
             <label for="name" class="label-upper">Votre nom</label>
-            <input type="text" name="nom" class="input white-input input-with-submit" id="name">
+            <input type="text" name="name" class="input white-input input-with-submit" id="name">
             <label for="votre_email" class="label-upper">Votre email</label>
             <input type="text" name="email" class="input white-input input-with-submit" id="votre_email">
             <h5>Samedi 22 septembre</h5>
@@ -372,7 +372,7 @@
               <label for="brunch_oui">Oui</label>
             </div>
             <div class="checkbox-dot">
-              <input type="checkbox" name="answer_brunch" id="brunch_non">
+              <input type="checkbox" name="answer_brunch" id="brunch_non" value="non">
               <label for="brunch_non">Non</label>
             </div>
             <div>

@@ -1,10 +1,13 @@
 class PagesController < ApplicationController
   def wedding
-    email = params["email"]
+    email = params["email"] || session[:email]
+    puts "session : #{session[:email]}"
+    puts "les params : #{params["email"]}"
     if email.blank?
       @notification = "Vous n'avez pas renseigné votre adresse email. Merci d'utiliser celle sur laquelle vous avez reçu le faire-part."
       render :landing
     else
+    session[:email] = session[:email] || params["email"]
       if is_invited?(email) && is_invited_to_lunch?(email)
         @user_type = "lunch_invited"
       elsif is_invited?(email)
@@ -43,21 +46,21 @@ class PagesController < ApplicationController
     attributes = {
       name: params[:name],
       email: params[:email],
-      answer_dejeuner: params[:answer_dejeuner],
-      answer_diner: params[:answer_diner],
-      answer_brunch: params[:answer_brunch],
-      nb_dejeuner: params[:nb_dejeuner],
-      nb_diner: params[:nb_diner],
-      nb_brunch: params[:nb_brunch]
+      answer_dejeuner: params[:answer_dejeuner] == "oui",
+      answer_diner: params[:answer_diner] == "oui",
+      answer_brunch: params[:answer_brunch] == "oui",
+      nb_dejeuner: params[:nb_dejeuner].to_i,
+      nb_diner: params[:nb_diner].to_i,
+      nb_brunch: params[:nb_brunch].to_i
     }
     answer = Answer.new(attributes)
     if answer.save
-      # ici envoyer un email avec les informations
+      @notification = "Nous avons bien enregistré votre réponse, nous vous en remercions."
+      render :wedding
     else
-      # ici ajouter du js.erb
+      @notification = "Nous n'avons pas pu enregistrer votre réponse, merci de ré-essayer ou nous contacter directement par email à julieetmatthieu.mariage@gmail.com"
+      render :wedding
     end
-    redirect_to wedding_path
-
   end
 
   private

@@ -36,3 +36,27 @@
     color: $light-green;
   }
 }
+
+// MODIFY SWALL BUTTON
+.swal-button {
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $green !important;
+  border: 2px solid $green !important;
+  color: white;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: transparent;
+    color: $green;
+  }
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: $green !important;
+    color: white;
+  }
+}
